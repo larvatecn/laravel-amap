@@ -1,0 +1,35 @@
+{
+    "name": "larva/laravel-amap",
+    "description": "AMAP extension for Laravel.",
+    "keywords": [
+        "Larva",
+        "laravel",
+        "amap"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "illuminate/support": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+        "larva/support": "^1.0",
+        "larva/laravel-settings": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Larva\\AMAP\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Larva\\AMAP\\AMAPServiceProvider"
+            ],
+            "aliases": {
+                "AMAP": "Larva\\AMAP\\AMAP"
+            }
+        }
+    },
+    "prefer-stable": true
+}
