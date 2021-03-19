@@ -19,12 +19,7 @@ class AMAPServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('amap', function () {
-            if (isset($this->app->config['services']['amp.api_key'])) {
-                $apiKey = $this->app->config['services']['amp.api_key'];
-            } else {
-                $apiKey = settings('amp_key');
-            }
-            return new AMAPClient(['apiKey' => $apiKey]);
+            return new AMAPClient(['apiKey' => settings('system.amp_key')]);
         });
     }
 }
